@@ -13,6 +13,7 @@
 		04C91C1B2A8C276D0085069B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C91C1A2A8C276D0085069B /* Preview Assets.xcassets */; };
 		04C91C262A8C276E0085069B /* AssignmentOpenTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C91C252A8C276E0085069B /* AssignmentOpenTextTests.swift */; };
 		04C91C312A8C276E0085069B /* AssignmentOpenTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C91C302A8C276E0085069B /* AssignmentOpenTextUITests.swift */; };
+		04C91C422A8C29F20085069B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C91C412A8C29F20085069B /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		04C91C2C2A8C276E0085069B /* AssignmentOpenTextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentOpenTextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C91C302A8C276E0085069B /* AssignmentOpenTextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOpenTextUITests.swift; sourceTree = "<group>"; };
 		04C91C322A8C276E0085069B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C91C412A8C29F20085069B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				04C91C172A8C276D0085069B /* Assets.xcassets */,
 				04C91C1C2A8C276D0085069B /* Info.plist */,
 				04C91C192A8C276D0085069B /* Preview Content */,
+				04C91C412A8C29F20085069B /* Model.swift */,
 			);
 			path = AssignmentOpenText;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C91C422A8C29F20085069B /* Model.swift in Sources */,
 				04C91C162A8C276A0085069B /* ContentView.swift in Sources */,
 				04C91C142A8C276A0085069B /* AssignmentOpenTextApp.swift in Sources */,
 			);
