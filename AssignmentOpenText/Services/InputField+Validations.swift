@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct InputField: View {
+    
+    // MARK: - Properties
     var title: String
     @Binding var text: String
     var isSecure = false

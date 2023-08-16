@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct LoginSignupView: View {
+    
+    // MARK: - Properties
     @State private var username = ""
     @State private var password = ""
     @State private var confirmPassword = ""
@@ -22,9 +24,9 @@ struct LoginSignupView: View {
             Color.accentColor
             
             VStack {
-               
+                
                 InputField(title: "Username", text: $username, showError: showError && !isUsernameValid()).onAppear {
-                    // Load the username from Keychain when the view appears
+                    // MARK: - Load the username from Keychain when the view appears
                     if isLogin {if let storedUser = viewModel.user {
                         username = storedUser.username
                     }
@@ -63,18 +65,15 @@ struct LoginSignupView: View {
                     showError = true
                     if isValidationSuccessful() {
                         if isLogin {
+                            // MARK: - Handle login action
+                            
                             if !viewModel.login(username: username, password: password) {
                                 showError = true
                                 errorMessage = "Invalid username or password"
-                                
-                                print("Fail")
                             }
-                            
-                            // Handle login action
                         } else {
+                            // MARK: - Handle signup action
                             viewModel.register(username: username, password: password)
-                            
-                            // Handle signup action
                         }
                     }
                 }) {
@@ -102,6 +101,9 @@ struct LoginSignupView: View {
         }
         
     }
+    
+    // MARK: - Validation functions
+
     private func isUsernameValid() -> Bool {
         return !username.isEmpty
     }

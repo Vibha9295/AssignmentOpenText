@@ -1,13 +1,15 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    // MARK: - Properties
     @EnvironmentObject var viewModel: LoginRegisterViewModel
     
     var body: some View {
         ZStack {
             Color.accentColor
             VStack {
-                // Welcome message
+                // MARK: - Welcome Messages
                 Text("Welcome, \(viewModel.user?.username ?? "")!")
                     .font(.title)
                     .foregroundColor(.white)
@@ -18,7 +20,7 @@ struct ProfileView: View {
                     .foregroundColor(.white)
                     .padding()
                 
-                // Logout button
+                // MARK: - Logout Button
                 Button("Logout") {
                     viewModel.isLoggedIn = false
                     if KeychainServicesHelper.deleteUser(username: viewModel.user?.username ?? "") {
@@ -33,7 +35,7 @@ struct ProfileView: View {
                 .cornerRadius(10)
                 .padding(.horizontal)
                 
-                // Delete Account button
+                // MARK: - Delete Account button
                 Button("Delete Account") {
                     viewModel.deleteAccount()
                 }

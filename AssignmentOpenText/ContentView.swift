@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - Properties
     @EnvironmentObject var viewModel: LoginRegisterViewModel
    
     var body: some View {
