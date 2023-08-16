@@ -14,7 +14,7 @@ struct LoginSignupView: View {
     @State private var confirmPassword = ""
     @State private var isLogin = true
     @State private var showError = false
-    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var viewModel: LoginRegisterViewModel
     @State private var errorMessage = ""
     
     var body: some View {
@@ -25,7 +25,7 @@ struct LoginSignupView: View {
                
                 InputField(title: "Username", text: $username, showError: showError && !isUsernameValid()).onAppear {
                     // Load the username from Keychain when the view appears
-                    if isLogin {if let storedUser = authViewModel.user {
+                    if isLogin {if let storedUser = viewModel.user {
                         username = storedUser.username
                     }
                     }
@@ -63,7 +63,7 @@ struct LoginSignupView: View {
                     showError = true
                     if isValidationSuccessful() {
                         if isLogin {
-                            if !authViewModel.login(username: username, password: password) {
+                            if !viewModel.login(username: username, password: password) {
                                 showError = true
                                 errorMessage = "Invalid username or password"
                                 
@@ -72,7 +72,7 @@ struct LoginSignupView: View {
                             
                             // Handle login action
                         } else {
-                            authViewModel.register(username: username, password: password)
+                            viewModel.register(username: username, password: password)
                             
                             // Handle signup action
                         }

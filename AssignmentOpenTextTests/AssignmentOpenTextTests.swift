@@ -9,25 +9,36 @@ import XCTest
 @testable import AssignmentOpenText
 
 class AssignmentOpenTextTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var viewModel: LoginSignupViewModel!
+    
+    override func setUp() {
+        super.setUp()
+        viewModel = LoginSignupViewModel()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        viewModel = nil
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testLogin() {
+        // Mock user data and test login logic
+        let username = "testuser"
+        let password = "testpassword"
+        viewModel.register(username: username, password: password)
+        
+        XCTAssertTrue(viewModel.login(username: username, password: password))
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testRegister() {
+        // Test registration logic
+        let username = "newuser"
+        let password = "newpassword"
+        viewModel.register(username: username, password: password)
+        
+        XCTAssertTrue(viewModel.isLoggedIn)
+        XCTAssertEqual(viewModel.user?.username, username)
     }
-
+    
 }
+

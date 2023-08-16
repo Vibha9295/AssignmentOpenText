@@ -1,5 +1,5 @@
 //
-//  AuthViewModel.swift
+//  LoginRegisterViewModel.swift
 //  AssignmentOpenText
 //
 //  Created by Mac on 15/08/23.
@@ -8,14 +8,17 @@
 import Foundation
 import SwiftUI
 
-class AuthViewModel: ObservableObject {
+class LoginRegisterViewModel: ObservableObject {
+    // MARK: - Properties
     @Published var isLoggedIn: Bool = false
     @Published var user: UserModel?
     
+    // MARK: - Initialization
     init() {
         checkAuthentication()
     }
     
+    // MARK: - Authentication Methods
     private func checkAuthentication() {
         if let storedUser = KeychainServicesHelper.loadUserData() {
             user = storedUser
@@ -35,10 +38,8 @@ class AuthViewModel: ObservableObject {
         }
         if storedUser.username == username && storedUser.password == password {
             isLoggedIn = true
-            
         }
         return storedUser.password == password
-        
     }
     
     func deleteAccount() {
@@ -46,4 +47,6 @@ class AuthViewModel: ObservableObject {
         user = nil
         isLoggedIn = false
     }
+    
+    
 }

@@ -1,38 +1,30 @@
-//
-//  ProfileView.swift
-//  AssignmentOpenText
-//
-//  Created by Mac on 15/08/23.
-//
-
-import Foundation
 import SwiftUI
 
-
 struct ProfileView: View {
-    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var viewModel: LoginRegisterViewModel
     
     var body: some View {
         ZStack {
             Color.accentColor
             VStack {
-                
-                Text("Welcome, \(authViewModel.user?.username ?? "")!")
+                // Welcome message
+                Text("Welcome, \(viewModel.user?.username ?? "")!")
                     .font(.title)
                     .foregroundColor(.white)
                     .padding()
-                Text("Authorized..  You are in!!")
+                
+                Text("Authorized.. You are in!!")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .padding()
                 
+                // Logout button
                 Button("Logout") {
-                    authViewModel.isLoggedIn = false
-                    if KeychainServicesHelper.deleteUser(username: authViewModel.user?.username ?? ""){
-                        authViewModel.isLoggedIn = false
+                    viewModel.isLoggedIn = false
+                    if KeychainServicesHelper.deleteUser(username: viewModel.user?.username ?? "") {
+                        viewModel.isLoggedIn = false
                     }
                 }
-                
                 .foregroundColor(.accentColor)
                 .padding()
                 .font(.title3)
@@ -41,8 +33,9 @@ struct ProfileView: View {
                 .cornerRadius(10)
                 .padding(.horizontal)
                 
+                // Delete Account button
                 Button("Delete Account") {
-                    authViewModel.deleteAccount()
+                    viewModel.deleteAccount()
                 }
                 .foregroundColor(.accentColor)
                 .padding()
@@ -51,6 +44,8 @@ struct ProfileView: View {
                 .background(Color.white)
                 .cornerRadius(10)
                 .padding(.horizontal)
-            }}.navigationTitle("Profile")
+            }
+        }
+        .navigationTitle("Profile")
     }
 }

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var viewModel: LoginRegisterViewModel
    
     var body: some View {
         NavigationView {
 
-            if authViewModel.isLoggedIn {
+            if viewModel.isLoggedIn {
                 ProfileView()
             }
             else {

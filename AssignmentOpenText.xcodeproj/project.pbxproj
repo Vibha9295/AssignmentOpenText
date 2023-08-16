@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0425A71F2A8C4EFD004B091C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A71E2A8C4EFD004B091C /* UserModel.swift */; };
-		0425A7272A8C4F18004B091C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A7262A8C4F18004B091C /* AuthViewModel.swift */; };
+		0425A7272A8C4F18004B091C /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A7262A8C4F18004B091C /* LoginRegisterViewModel.swift */; };
 		0425A72C2A8C4F34004B091C /* KeychainServicesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */; };
 		0425A7312A8C4F57004B091C /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A7302A8C4F57004B091C /* LoginRegisterView.swift */; };
 		0425A7362A8C4F8E004B091C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A7352A8C4F8E004B091C /* ProfileView.swift */; };
@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0425A71E2A8C4EFD004B091C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		0425A7262A8C4F18004B091C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		0425A7262A8C4F18004B091C /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
 		0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServicesHelper.swift; sourceTree = "<group>"; };
 		0425A7302A8C4F57004B091C /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
 		0425A7352A8C4F8E004B091C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		0425A71C2A8C4E98004B091C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0425A7262A8C4F18004B091C /* AuthViewModel.swift */,
+				0425A7262A8C4F18004B091C /* LoginRegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			files = (
 				0425A7362A8C4F8E004B091C /* ProfileView.swift in Sources */,
 				0425A7312A8C4F57004B091C /* LoginRegisterView.swift in Sources */,
-				0425A7272A8C4F18004B091C /* AuthViewModel.swift in Sources */,
+				0425A7272A8C4F18004B091C /* LoginRegisterViewModel.swift in Sources */,
 				04C91C422A8C29F20085069B /* Model.swift in Sources */,
 				04C91C162A8C276A0085069B /* ContentView.swift in Sources */,
 				0425A72C2A8C4F34004B091C /* KeychainServicesHelper.swift in Sources */,

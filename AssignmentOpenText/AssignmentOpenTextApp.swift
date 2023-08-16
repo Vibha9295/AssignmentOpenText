@@ -12,7 +12,7 @@ struct AssignmentOpenTextApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(AuthViewModel())
+                .environmentObject(LoginRegisterViewModel())
         }
     }
 }

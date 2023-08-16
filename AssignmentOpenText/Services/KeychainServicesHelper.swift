@@ -8,9 +8,14 @@
 import Foundation
 import Security
 
+import Foundation
+import Security
+
 class KeychainServicesHelper {
+    // MARK: - Properties
     static let serviceName = "com.AssignmentOpenText"
     
+    // MARK: - Public Methods
     static func saveUserData(user: UserModel) {
         let encoder = JSONEncoder()
         if let userData = try? encoder.encode(user) {
@@ -53,6 +58,7 @@ class KeychainServicesHelper {
         let status = SecItemDelete(query as CFDictionary)
         return status == errSecSuccess
     }
+    
     static func deleteUserData() {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
@@ -60,5 +66,4 @@ class KeychainServicesHelper {
         ]
         SecItemDelete(query as CFDictionary)
     }
-    
 }
