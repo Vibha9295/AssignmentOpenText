@@ -12,6 +12,7 @@
 		0425A72C2A8C4F34004B091C /* KeychainServicesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */; };
 		0425A7312A8C4F57004B091C /* LoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A7302A8C4F57004B091C /* LoginRegisterView.swift */; };
 		0425A7362A8C4F8E004B091C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A7352A8C4F8E004B091C /* ProfileView.swift */; };
+		04922F7D2A8D396700AB3D72 /* InputField+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04922F7C2A8D396700AB3D72 /* InputField+Validations.swift */; };
 		04C91C142A8C276A0085069B /* AssignmentOpenTextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C91C132A8C276A0085069B /* AssignmentOpenTextApp.swift */; };
 		04C91C162A8C276A0085069B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C91C152A8C276A0085069B /* ContentView.swift */; };
 		04C91C182A8C276D0085069B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C91C172A8C276D0085069B /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		0425A7302A8C4F57004B091C /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
 		0425A7352A8C4F8E004B091C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		043847712A8C67A200007009 /* AssignmentOpenText.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AssignmentOpenText.entitlements; sourceTree = "<group>"; };
+		04922F7C2A8D396700AB3D72 /* InputField+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputField+Validations.swift"; sourceTree = "<group>"; };
 		04C91C102A8C276A0085069B /* AssignmentOpenText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentOpenText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C91C132A8C276A0085069B /* AssignmentOpenTextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOpenTextApp.swift; sourceTree = "<group>"; };
 		04C91C152A8C276A0085069B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,8 +107,8 @@
 		0425A71B2A8C4E8D004B091C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0425A7262A8C4F18004B091C /* AuthViewModel.swift */,
 				0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */,
+				04922F7C2A8D396700AB3D72 /* InputField+Validations.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -114,6 +116,7 @@
 		0425A71C2A8C4E98004B091C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0425A7262A8C4F18004B091C /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				0425A72C2A8C4F34004B091C /* KeychainServicesHelper.swift in Sources */,
 				0425A71F2A8C4EFD004B091C /* UserModel.swift in Sources */,
 				04C91C142A8C276A0085069B /* AssignmentOpenTextApp.swift in Sources */,
+				04922F7D2A8D396700AB3D72 /* InputField+Validations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

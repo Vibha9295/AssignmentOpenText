@@ -8,33 +8,49 @@
 import Foundation
 import SwiftUI
 
+
 struct ProfileView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
-        VStack {
-            Text("Welcome, \(authViewModel.user?.username ?? "")!")
-                .font(.title)
+        ZStack {
+            Color.accentColor
+            VStack {
+                
+                Text("Welcome, \(authViewModel.user?.username ?? "")!")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .padding()
+                Text("Authorized..  You are in!!")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding()
+                
+                Button("Logout") {
+                    authViewModel.isLoggedIn = false
+                    if KeychainServicesHelper.deleteUser(username: authViewModel.user?.username ?? ""){
+                        authViewModel.isLoggedIn = false
+                    }
+                }
+                
+                .foregroundColor(.accentColor)
                 .padding()
-            Text("Authorized..  You are in!!")
-                .font(.largeTitle)
-            Button("Logout") {
-                authViewModel.isLoggedIn = false
-                //authViewModel.logout()
-            }
-            .padding()
-            .background(Color.red)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            
-            Button("Delete Account") {
-                authViewModel.deleteAccount()
-            }
-            .padding()
-            .background(Color.red)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-        }
-        .navigationTitle("Profile")
+                .font(.title3)
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .cornerRadius(10)
+                .padding(.horizontal)
+                
+                Button("Delete Account") {
+                    authViewModel.deleteAccount()
+                }
+                .foregroundColor(.accentColor)
+                .padding()
+                .font(.title3)
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .cornerRadius(10)
+                .padding(.horizontal)
+            }}.navigationTitle("Profile")
     }
 }

@@ -23,28 +23,22 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func register(username: String, password: String) {
+    func register(username: String, password: String)    {
         let newUser = UserModel(username: username, password: password)
         KeychainServicesHelper.saveUserData(user: newUser)
         user = newUser
         isLoggedIn = true
     }
-    
-    func login(username: String, password: String) {
+    func login(username: String, password: String) -> Bool {
         guard let storedUser = user else {
-            return
+            return false
         }
-        
         if storedUser.username == username && storedUser.password == password {
             isLoggedIn = true
+            
         }
-    }
-    
-    
-    func logout() {
-        KeychainServicesHelper.deleteUserData()
-        user = nil
-        isLoggedIn = false
+        return storedUser.password == password
+        
     }
     
     func deleteAccount() {
