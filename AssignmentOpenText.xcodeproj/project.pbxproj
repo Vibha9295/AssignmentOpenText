@@ -45,7 +45,6 @@
 		0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServicesHelper.swift; sourceTree = "<group>"; };
 		0425A7302A8C4F57004B091C /* LoginRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterView.swift; sourceTree = "<group>"; };
 		0425A7352A8C4F8E004B091C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		043847712A8C67A200007009 /* AssignmentOpenText.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AssignmentOpenText.entitlements; sourceTree = "<group>"; };
 		04922F7C2A8D396700AB3D72 /* InputField+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputField+Validations.swift"; sourceTree = "<group>"; };
 		04C91C102A8C276A0085069B /* AssignmentOpenText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentOpenText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C91C132A8C276A0085069B /* AssignmentOpenTextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOpenTextApp.swift; sourceTree = "<group>"; };
@@ -87,11 +86,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04124A522A8D8EA30097805A /* User Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0425A71C2A8C4E98004B091C /* ViewModel */,
+				0425A71A2A8C4E85004B091C /* Model */,
+				0425A7192A8C4E7A004B091C /* View */,
+			);
+			path = "User Authentication";
+			sourceTree = "<group>";
+		};
 		0425A7192A8C4E7A004B091C /* View */ = {
 			isa = PBXGroup;
 			children = (
 				0425A7302A8C4F57004B091C /* LoginRegisterView.swift */,
 				0425A7352A8C4F8E004B091C /* ProfileView.swift */,
+				04C91C152A8C276A0085069B /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,13 +114,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0425A71B2A8C4E8D004B091C /* Services */ = {
+		0425A71B2A8C4E8D004B091C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */,
 				04922F7C2A8D396700AB3D72 /* InputField+Validations.swift */,
 			);
-			path = Services;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		0425A71C2A8C4E98004B091C /* ViewModel */ = {
@@ -144,13 +154,9 @@
 		04C91C122A8C276A0085069B /* AssignmentOpenText */ = {
 			isa = PBXGroup;
 			children = (
-				043847712A8C67A200007009 /* AssignmentOpenText.entitlements */,
-				0425A71C2A8C4E98004B091C /* ViewModel */,
-				0425A71B2A8C4E8D004B091C /* Services */,
-				0425A71A2A8C4E85004B091C /* Model */,
-				0425A7192A8C4E7A004B091C /* View */,
+				04124A522A8D8EA30097805A /* User Authentication */,
+				0425A71B2A8C4E8D004B091C /* Helpers */,
 				04C91C132A8C276A0085069B /* AssignmentOpenTextApp.swift */,
-				04C91C152A8C276A0085069B /* ContentView.swift */,
 				04C91C172A8C276D0085069B /* Assets.xcassets */,
 				04C91C1C2A8C276D0085069B /* Info.plist */,
 				04C91C192A8C276D0085069B /* Preview Content */,

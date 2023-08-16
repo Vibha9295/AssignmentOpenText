@@ -16,9 +16,9 @@ struct LoginSignupView: View {
     @State private var confirmPassword = ""
     @State private var isLogin = true
     @State private var showError = false
-    @EnvironmentObject var viewModel: LoginRegisterViewModel
     @State private var errorMessage = ""
-    
+    @EnvironmentObject var viewModel: LoginRegisterViewModel
+
     var body: some View {
         ZStack {
             Color.accentColor
