@@ -8,9 +8,6 @@
 import Foundation
 import Security
 
-import Foundation
-import Security
-
 class KeychainServicesHelper {
     // MARK: - Properties
     static let serviceName = "com.AssignmentOpenText"

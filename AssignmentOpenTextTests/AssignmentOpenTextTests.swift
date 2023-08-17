@@ -9,11 +9,11 @@ import XCTest
 @testable import AssignmentOpenText
 
 class AssignmentOpenTextTests: XCTestCase {
-    var viewModel: LoginSignupViewModel!
+    var viewModel: LoginRegisterViewModel!
     
     override func setUp() {
         super.setUp()
-        viewModel = LoginSignupViewModel()
+        viewModel = LoginRegisterViewModel()
     }
     
     override func tearDown() {
