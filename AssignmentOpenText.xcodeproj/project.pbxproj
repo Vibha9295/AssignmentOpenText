@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04124A652A8D993D0097805A /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04124A642A8D993D0097805A /* ButtonStyle.swift */; };
+		04124A892A8DA9110097805A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04124A882A8DA9110097805A /* LaunchScreen.storyboard */; };
 		0425A71F2A8C4EFD004B091C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A71E2A8C4EFD004B091C /* UserModel.swift */; };
 		0425A7272A8C4F18004B091C /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A7262A8C4F18004B091C /* LoginRegisterViewModel.swift */; };
 		0425A72C2A8C4F34004B091C /* KeychainServicesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */; };
@@ -20,7 +21,6 @@
 		04C91C1B2A8C276D0085069B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C91C1A2A8C276D0085069B /* Preview Assets.xcassets */; };
 		04C91C262A8C276E0085069B /* AssignmentOpenTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C91C252A8C276E0085069B /* AssignmentOpenTextTests.swift */; };
 		04C91C312A8C276E0085069B /* AssignmentOpenTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C91C302A8C276E0085069B /* AssignmentOpenTextUITests.swift */; };
-		04C91C422A8C29F20085069B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C91C412A8C29F20085069B /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		04124A642A8D993D0097805A /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		04124A882A8DA9110097805A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0425A71E2A8C4EFD004B091C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		0425A7262A8C4F18004B091C /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
 		0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServicesHelper.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		04C91C2C2A8C276E0085069B /* AssignmentOpenTextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentOpenTextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C91C302A8C276E0085069B /* AssignmentOpenTextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOpenTextUITests.swift; sourceTree = "<group>"; };
 		04C91C322A8C276E0085069B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04C91C412A8C29F20085069B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +171,7 @@
 				04C91C172A8C276D0085069B /* Assets.xcassets */,
 				04C91C1C2A8C276D0085069B /* Info.plist */,
 				04C91C192A8C276D0085069B /* Preview Content */,
-				04C91C412A8C29F20085069B /* Model.swift */,
+				04124A882A8DA9110097805A /* LaunchScreen.storyboard */,
 			);
 			path = AssignmentOpenText;
 			sourceTree = "<group>";
@@ -305,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04124A892A8DA9110097805A /* LaunchScreen.storyboard in Resources */,
 				04C91C1B2A8C276D0085069B /* Preview Assets.xcassets in Resources */,
 				04C91C182A8C276D0085069B /* Assets.xcassets in Resources */,
 			);
@@ -335,7 +336,6 @@
 				0425A7312A8C4F57004B091C /* LoginRegisterView.swift in Sources */,
 				0425A7272A8C4F18004B091C /* LoginRegisterViewModel.swift in Sources */,
 				04124A652A8D993D0097805A /* ButtonStyle.swift in Sources */,
-				04C91C422A8C29F20085069B /* Model.swift in Sources */,
 				04C91C162A8C276A0085069B /* ContentView.swift in Sources */,
 				0425A72C2A8C4F34004B091C /* KeychainServicesHelper.swift in Sources */,
 				0425A71F2A8C4EFD004B091C /* UserModel.swift in Sources */,
