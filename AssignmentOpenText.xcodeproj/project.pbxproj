@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04124A652A8D993D0097805A /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04124A642A8D993D0097805A /* ButtonStyle.swift */; };
 		0425A71F2A8C4EFD004B091C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A71E2A8C4EFD004B091C /* UserModel.swift */; };
 		0425A7272A8C4F18004B091C /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A7262A8C4F18004B091C /* LoginRegisterViewModel.swift */; };
 		0425A72C2A8C4F34004B091C /* KeychainServicesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04124A642A8D993D0097805A /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		0425A71E2A8C4EFD004B091C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		0425A7262A8C4F18004B091C /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
 		0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServicesHelper.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 			path = "User Authentication";
 			sourceTree = "<group>";
 		};
+		04124A692A8D9F000097805A /* Keychain Services */ = {
+			isa = PBXGroup;
+			children = (
+				0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */,
+			);
+			path = "Keychain Services";
+			sourceTree = "<group>";
+		};
 		0425A7192A8C4E7A004B091C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +127,8 @@
 		0425A71B2A8C4E8D004B091C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0425A72B2A8C4F34004B091C /* KeychainServicesHelper.swift */,
 				04922F7C2A8D396700AB3D72 /* InputField+Validations.swift */,
+				04124A642A8D993D0097805A /* ButtonStyle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -154,6 +164,7 @@
 		04C91C122A8C276A0085069B /* AssignmentOpenText */ = {
 			isa = PBXGroup;
 			children = (
+				04124A692A8D9F000097805A /* Keychain Services */,
 				04124A522A8D8EA30097805A /* User Authentication */,
 				0425A71B2A8C4E8D004B091C /* Helpers */,
 				04C91C132A8C276A0085069B /* AssignmentOpenTextApp.swift */,
@@ -323,6 +334,7 @@
 				0425A7362A8C4F8E004B091C /* ProfileView.swift in Sources */,
 				0425A7312A8C4F57004B091C /* LoginRegisterView.swift in Sources */,
 				0425A7272A8C4F18004B091C /* LoginRegisterViewModel.swift in Sources */,
+				04124A652A8D993D0097805A /* ButtonStyle.swift in Sources */,
 				04C91C422A8C29F20085069B /* Model.swift in Sources */,
 				04C91C162A8C276A0085069B /* ContentView.swift in Sources */,
 				0425A72C2A8C4F34004B091C /* KeychainServicesHelper.swift in Sources */,
@@ -500,7 +512,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -524,7 +536,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -18,7 +18,7 @@ struct LoginSignupView: View {
     @State private var showError = false
     @State private var errorMessage = ""
     @EnvironmentObject var viewModel: LoginRegisterViewModel
-
+    
     var body: some View {
         ZStack {
             Color.accentColor
@@ -77,13 +77,23 @@ struct LoginSignupView: View {
                         }
                     }
                 }) {
-                    Text(isLogin ? "Login" : "Sign Up")
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .background(isValidationSuccessful() ? Color.blue : Color.gray)
-                        .cornerRadius(10)
-                        .padding(.horizontal)
+                    Button(isLogin ? "Login" : "Sign Up") {
+                        showError = true
+                        if isValidationSuccessful() {
+                            if isLogin {
+                                // MARK: - Handle login action
+                                
+                                if !viewModel.login(username: username, password: password) {
+                                    showError = true
+                                    errorMessage = "Invalid username or password"
+                                }
+                            } else {
+                                // MARK: - Handle signup action
+                                viewModel.register(username: username, password: password)
+                            }
+                        }
+                    }
+                    .modifier(ButtonStyle())
                     
                 }
                 
@@ -103,7 +113,7 @@ struct LoginSignupView: View {
     }
     
     // MARK: - Validation functions
-
+    
     private func isUsernameValid() -> Bool {
         return !username.isEmpty
     }

@@ -26,26 +26,14 @@ struct ProfileView: View {
                     if KeychainServicesHelper.deleteUser(username: viewModel.user?.username ?? "") {
                         viewModel.isLoggedIn = false
                     }
-                }
-                .foregroundColor(.accentColor)
-                .padding()
-                .font(.title3)
-                .frame(maxWidth: .infinity)
-                .background(Color.white)
-                .cornerRadius(10)
-                .padding(.horizontal)
+                }.modifier(ButtonStyle())
+                
                 
                 // MARK: - Delete Account button
                 Button("Delete Account") {
                     viewModel.deleteAccount()
-                }
-                .foregroundColor(.accentColor)
-                .padding()
-                .font(.title3)
-                .frame(maxWidth: .infinity)
-                .background(Color.white)
-                .cornerRadius(10)
-                .padding(.horizontal)
+                    
+                }.modifier(ButtonStyle())
             }
         }
         .navigationTitle("Profile")

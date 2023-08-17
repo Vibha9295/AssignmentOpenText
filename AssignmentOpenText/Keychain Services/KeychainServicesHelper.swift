@@ -53,8 +53,7 @@ class KeychainServicesHelper {
     
     static func deleteUser(username: String) -> Bool {
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                    kSecAttrAccount as String: username]
-        
+                                    kSecAttrAccount as String: username,kSecAttrService as String: serviceName]
         let status = SecItemDelete(query as CFDictionary)
         return status == errSecSuccess
     }
