@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct LoginSignupView: View {
+struct LoginRegisterView: View {
     
     // MARK: - Properties
     @State private var username = ""
@@ -112,6 +112,9 @@ struct LoginSignupView: View {
         
     }
     
+    
+}
+extension LoginRegisterView{
     // MARK: - Validation functions
     
     private func isUsernameValid() -> Bool {
@@ -137,4 +140,3 @@ struct LoginSignupView: View {
         showError = false
     }
 }
-

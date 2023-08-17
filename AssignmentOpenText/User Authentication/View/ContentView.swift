@@ -17,7 +17,7 @@ struct ContentView: View {
                 ProfileView()
             }
             else {
-                LoginSignupView()
+                LoginRegisterView()
             }
         }
     }
